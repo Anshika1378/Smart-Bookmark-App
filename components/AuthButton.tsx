@@ -6,7 +6,9 @@ export function AuthButton() {
   const handleLogin = async () => {
     await supabase.auth.signInWithOAuth({ provider: 'google',
       options :{
-        redirectTo: "http://localhost:3000/bookmarks",
+        // redirectTo: "http://localhost:3000/bookmarks",
+        redirectTo: "https://smart-bookmark-app-psi-gold.vercel.app/bookmarks"
+
       }
      });
   };
